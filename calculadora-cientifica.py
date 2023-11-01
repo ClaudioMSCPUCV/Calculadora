@@ -16,6 +16,9 @@ def calculadora_cientifica():
         print("10. Seno")
         print("11. Coseno")
         print("12. Tangente")
+        print("13. ArcoSeno")
+        print("14. ArcoCoseno")
+        print("15. ArcoTangente")
         print("0. Salir")
         
         opcion = int(input("Elige una opción: "))
@@ -62,6 +65,14 @@ def calculadora_cientifica():
                 resultado = math.cos(a)
             elif opcion == 11:
                 resultado = math.tan(a)
+        elif opcion in [13, 14, 15]:
+            a = float(input("Ingrese el valor de la función trigonométrica: "))
+            if opcion == 13:
+                resultado = math.asin(a)
+            elif opcion == 14:
+                resultado = math.acos(a)
+            elif opcion == 15:
+                resultado = math.atan(a)
         else:
             print("Opción no válida.")
             continue

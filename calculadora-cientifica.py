@@ -12,9 +12,10 @@ def calculadora_cientifica():
         print("6. Raíz cuadrada")
         print("7. Exponencial")
         print("8. Logaritmo natural (ln)")
-        print("9. Seno")
-        print("10. Coseno")
-        print("11. Tangente")
+        print("9. Logaritmo base 10 (log)")
+        print("10. Seno")
+        print("11. Coseno")
+        print("12. Tangente")
         print("0. Salir")
         
         opcion = int(input("Elige una opción: "))
@@ -50,7 +51,10 @@ def calculadora_cientifica():
         elif opcion == 8:
             a = float(input("Ingrese el número para calcular el logaritmo natural (ln): "))
             resultado = math.log(a)
-        elif opcion in [9, 10, 11]:
+        elif opcion == 9:
+            a = float(input("Ingrese el número para calcular el logaritmo en base 10: "))
+            resultado = math.log(a)/(math.log(10))
+        elif opcion in [10, 11, 12]:
             a = float(input("Ingrese el ángulo en radianes: "))
             if opcion == 9:
                 resultado = math.sin(a)
